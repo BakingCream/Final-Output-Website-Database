@@ -1,0 +1,777 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@font-face {
+    font-family: "avengers";
+    src: url(font/avengers.ttf);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .services, .skills, .teams, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar{
+
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.5s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: rgb(0, 0, 0);
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    display: flex;
+    height: 100px;
+    width: 600px;
+    z-index: 1;
+    object-fit: cover;
+
+}
+
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    font-family: "avengers";
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("images/banner4.jpg") no-repeat center;
+    opacity: 1;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.shield{
+    display: flex;
+    background: url("images/shield.jpg") no-repeat center;
+    opacity: 1;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.avengers{
+    display: flex;
+    background: url("images/avengersbg.jpg") no-repeat center;
+    opacity: 1;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.avengers .avengers-content span{
+    position: relative;
+    top: 300px;
+
+}
+.gotg .gotg-content span{
+    position: relative;
+    top: 200px;
+    right: 400px;
+}
+.gotg{
+    display: flex;
+    background: url("images/gotg.jpg")  no-repeat center;
+    opacity: 1;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.infinity .infinity-content span{
+    position: relative;
+    top: 200px;
+    right: 400px;
+    opacity: 0.9;
+}
+.infinity{
+    display: flex;
+    background: url("images/infbg2.jpg")  no-repeat center;
+    opacity: 1;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width,
+.shield .max-width,
+.gotg .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row,
+.shield .max-width .row,
+.gotg .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1,
+.shield .home-content .text-1, 
+.gotg .home-content .text-1{ 
+    font-size: 27px;
+}
+.home .home-content .text-2,
+.shield .home-content .text-2, 
+.gotg .home-content .text-2{
+    margin-top: 5%;
+    font-family: "avengers";
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-2 #S {
+    color: rgb(152, 64, 224);
+}
+
+.home .home-content .text-2 #P {
+    color: rgb(64, 120, 224);
+}
+
+.home .home-content .text-2 #R {
+    color: rgb(224, 64, 91);
+}
+
+.home .home-content .text-2 #Po {
+    color: rgb(235, 149, 68);
+}
+
+.home .home-content .text-2 #W {
+    color: rgb(64, 224, 131);
+}
+
+.home .home-content .text-2 #Ss {
+    color: rgb(221, 224, 64);
+}
+
+.home .home-content .text-3,
+.shield .home-content .text-3,
+.gotg .home-content .text-3{
+    
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span,
+.shield .home-content .text-3 span,
+.gotg .home-content .text-3 span{
+    font-size: 40px;
+    font-family: "avengers";
+    font-weight: 500;
+}
+.home .home-content a,
+.shield .home-content a,
+.gotg .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover,
+.shield .home-content a:hover,
+.gotg .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* about section styling */
+.about .title::after{
+    content: "";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* services section styling */
+.services, .teams{
+    color:#fff;
+    background: #111;
+}
+.services .title::before,
+.teams .title::before{
+    background: #fff;
+}
+.services .title::after,
+.teams .title::after{
+    background: #111;
+    content: "Entertainment";
+}
+
+.services .serv-content{
+    left: 100%;
+}
+
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    margin-left: 35%;
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+    background: rgb(54, 10, 95);
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card .box #play1{   
+    display: block;
+    position: relative;
+    margin-top: 10%;
+    padding: 2%;
+    background: rgb(0, 0, 0);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    
+}
+.services .serv-content .card .box #play1:hover{
+    color: rgb(231, 58, 58);
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: rgb(173, 20, 220);
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i{
+    color: #fff;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* services section styling */
+.team .team-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.team .team-content .card .box #play1{   
+    display: block;
+    position: relative;
+    margin-top: 10%;
+    padding: 2%;
+    background: rgb(0, 0, 0);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    
+}
+.team .team-content .card .box #play1:hover{
+    color: rgb(231, 58, 58);
+}
+.team .team-content{
+    left: 100%;
+}
+.team{
+    color:#fff;
+    background: #111;
+}
+.team .text{
+    font-family: "avengers";
+}
+.team .title::before{
+    background: #fff;
+}
+.team .title::after{
+    background: #111;
+    content: "THE SAVIORS";
+}
+.team .team-content .card{
+    width: calc(33% - 20px);
+    display: inline-flex;
+    margin: 10px;
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.team .team-content .card:hover{
+    background: crimson;
+}
+.team .team-content .card .box{
+    transition: all 0.3s ease;
+}
+.team .team-content .card:hover .box{
+    transform: scale(1.05);
+}
+.team .team-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.team .team-content .card:hover i{
+    color: #fff;
+}
+.team .team-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+/* teams section styling */
+.teams .title::after{
+    content: "Power Gems";
+}
+.steams .title::after{
+    content: "The Trio";
+}
+.aveteam .title::after{
+    content: "Earth's Mightiest Heroes";
+    font-size: 14px;
+}
+.gotgteam .title::after{
+    content: "Galaxy's Savior";
+}
+.teams .carousel .card{
+    background: #222, 0.3;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover{
+    background: crimson;
+}
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.aveteam .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.steams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.gotgteam .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.aveteam .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.steams .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.gotgteam .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
+}
+
+/* footer section styling */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span #JK,
+#JK2{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        position: relative;
+        right: 10%;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .team .team-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        position: relative;
+        right: 15%;
+        width: 100%;
+    }
+    .team .team-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
