@@ -228,9 +228,7 @@ section .title::after{
     font-family: 'Ubuntu', sans-serif;
 }
 .avengers .avengers-content span{
-    position: relative;
-    top: 300px;
-
+    position: absolute;
 }
 .gotg .gotg-content span{
     position: absolute;
@@ -277,6 +275,16 @@ section .title::after{
     font-weight: 600;
     margin-left: -3px;
 }
+.avengers .avengers-content .text-2{
+    margin-top: 500px;
+    font-family: "avengers";
+    color: rgb(119, 119, 116);
+    text-shadow:10px 4px 0 rgb(255, 255, 255),0 1px 0 rgb(255, 255, 255),-1px 0 0 rgb(255, 255, 255),0 -1px 0 rgb(255, 255, 255);
+    font-style: italic;
+    font-size: 100px;
+    font-weight: 600;
+    margin-left: -600px;
+}
 .home .home-content .text-2 #S {
     color: rgb(152, 64, 224);
 }
@@ -303,8 +311,7 @@ section .title::after{
 
 .home .home-content .text-3,
 .shield .home-content .text-3,
-.gotg .home-content .text-3{
-    
+.gotg .home-content .text-3{  
     font-size: 25px;
     margin: 5px 0;
 }
