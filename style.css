@@ -212,6 +212,8 @@ section .title::after{
 }
 .gotg .gotg-content span{
     position: static;
+    width: fit-content;
+    height: fit-content;
     top: 200px;
     right: 400px;
 }
