@@ -506,7 +506,7 @@ section .title::after{
     transform: scale(1.05);
 }
 .team .team-content .card i img{
-    font-size: 100px;
+    height: 100px;
     color: crimson;
     transition: color 0.3s ease;
 }
