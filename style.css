@@ -205,16 +205,6 @@ section .title::after{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
-.avengers .avengers-content span{
-    position: relative;
-    top: 300px;
-
-}
-.gotg .gotg-content span{
-    position: absolute;
-    width: 200px;
-    height: 200px;
-}
 .gotg{
     display: flex;
     background: url("images/gotg.jpg")  no-repeat center;
@@ -226,12 +216,6 @@ section .title::after{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
-.infinity .infinity-content span{
-    position: relative;
-    top: 200px;
-    right: 400px;
-    opacity: 0.9;
-}
 .infinity{
     display: flex;
     background: url("images/infbg2.jpg")  no-repeat center;
@@ -242,6 +226,22 @@ section .title::after{
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
+}
+.avengers .avengers-content span{
+    position: relative;
+    top: 300px;
+
+}
+.gotg .gotg-content span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+.infinity .infinity-content span{
+    position: relative;
+    top: 200px;
+    right: 400px;
+    opacity: 0.9;
 }
 .home .max-width,
 .shield .max-width,
@@ -260,15 +260,23 @@ section .title::after{
     font-size: 27px;
 }
 .home .home-content .text-2,
-.shield .home-content .text-2, 
-.gotg .home-content .text-2{
+.shield .home-content .text-2{
     margin-top: 5%;
     font-family: "avengers";
-    font-size: 75px;
+    font-size: 65px;
     font-weight: 600;
     margin-left: -3px;
 }
-
+.gotg .gotg-content .text-2{
+    margin-top: 5%;
+    font-family: "avengers";
+    color: rgb(253, 228, 1);
+    text-shadow:12px 10px 0 red,0 1px 0 red,-1px 0 0 red,0 -1px 0 red;
+    font-style: italic;
+    font-size: 65px;
+    font-weight: 600;
+    margin-left: -3px;
+}
 .home .home-content .text-2 #S {
     color: rgb(152, 64, 224);
 }
@@ -685,9 +693,9 @@ footer span a:hover{
         font-size: 70px;
     }
     .gotg .gotg-content span{
-    position: absolute;
-    width: 200px;
-    height: 200px;
+        position: absolute;
+        width: 200px;
+        height: 200px;
     }
     .home .home-content .text-3{
         font-size: 35px;
@@ -735,9 +743,9 @@ footer span a:hover{
         font-size: 60px;
     }
     .gotg .gotg-content span{
-    position: absolute;
-    width: 200px;
-    height: 200px;
+        position: absolute;
+        width: 200px;
+        height: 200px;
     }
     .home .home-content .text-3{
         font-size: 32px;
@@ -760,9 +768,9 @@ footer span a:hover{
         font-size: 50px;
     }
     .gotg .gotg-content span{
-    position: absolute;
-    width: 200px;
-    height: 200px;
+        position: absolute;
+        width: 200px;
+        height: 200px;
     }
     .home .home-content .text-3{
         font-size: 27px;
