@@ -46,6 +46,7 @@ section{
 }
 .about .about-content,
 .services .serv-content,
+.team .team-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -234,20 +235,21 @@ section .title::after{
     height: 200px;
 }
 .infinity .infinity-content span{
-    position: relative;
-    top: 200px;
-    right: 400px;
     opacity: 0.9;
 }
 .home .max-width,
 .shield .max-width,
-.gotg .max-width{
+.gotg .max-width,
+.avengers .max-width,
+.infinity .max-width{
   width: 100%;
   display: flex;
 }
 .home .max-width .row,
 .shield .max-width .row,
-.gotg .max-width .row{
+.gotg .max-width .row,
+.avengers .row,
+.infinity .row{
   margin-right: 0;
 }
 .home .home-content .text-1,
@@ -255,11 +257,19 @@ section .title::after{
 .gotg .home-content .text-1{ 
     font-size: 27px;
 }
-.home .home-content .text-2,
-.shield .home-content .text-2{
+.home .home-content .text-2{
     margin-top: 5%;
     font-family: "avengers";
     font-size: 65px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.shield .shield-content .text-2{
+    margin-top: 5%;
+    font-family: "avengers";
+    color: rgb(49, 49, 49);
+    text-shadow:0px -4px 0px rgb(255, 255, 255),0 1px 0 rgb(255, 255, 255),-1px 0 0 rgb(255, 255, 255),0 -1px 0 rgb(255, 255, 255);
+    font-size: 55px;
     font-weight: 600;
     margin-left: -3px;
 }
@@ -275,35 +285,46 @@ section .title::after{
 }
 .avengers .avengers-content .text-2{
     font-family: "avengers";
-    color: rgb(119, 119, 116);
+    color: rgb(102, 102, 102);
     text-shadow:10px 4px 0 rgb(255, 255, 255),0 1px 0 rgb(255, 255, 255),-1px 0 0 rgb(255, 255, 255),0 -1px 0 rgb(255, 255, 255);
     font-style: italic;
     font-size: 100px;
     font-weight: 600;
-    margin-top: 500px;
-    margin-left: -30px;
+    margin-top: 180%;
+    margin-left: -3px;
 }
-.home .home-content .text-2 #S {
+.infinity .infinity-content .text-2{
+    font-family: "avengers";
+    color: rgb(102, 102, 102);
+    text-shadow:-12px 4px 0 rgb(255, 255, 255),0 1px 0 rgb(255, 255, 255),-10px 20px 20px rgb(253, 2, 2),-20px 14px 20px rgb(255, 255, 255);
+    font-style: italic;
+    font-size: 80px;
+    font-weight: 600;
+    margin-top: 170%;
+    margin-left: -3px;
+}
+.home .home-content .text-2 #S,
+.infinity .infinity-content .text-2 #S {
     color: rgb(152, 64, 224);
 }
 
-.home .home-content .text-2 #P {
+.home .home-content .text-2 #P,.infinity .infinity-content .text-2 #P {
     color: rgb(64, 120, 224);
 }
 
-.home .home-content .text-2 #R {
+.home .home-content .text-2 #R, .infinity .infinity-content .text-2 #R {
     color: rgb(224, 64, 91);
 }
 
-.home .home-content .text-2 #Po {
+.home .home-content .text-2 #Po,.infinity .infinity-content .text-2 #Po {
     color: rgb(235, 149, 68);
 }
 
-.home .home-content .text-2 #W {
+.home .home-content .text-2 #W, .infinity .infinity-content .text-2 #W {
     color: rgb(64, 224, 131);
 }
 
-.home .home-content .text-2 #Ss {
+.home .home-content .text-2 #Ss, .infinity .infinity-content .text-2 #Ss {
     color: rgb(221, 224, 64);
 }
 
@@ -321,27 +342,6 @@ section .title::after{
     font-family: "avengers";
     font-weight: 500;
 }
-.home .home-content a,
-.shield .home-content a,
-.gotg .home-content a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 20px;
-    font-weight: 400;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.home .home-content a:hover,
-.shield .home-content a:hover,
-.gotg .home-content a:hover{
-    color: crimson;
-    background: none;
-}
-
 /* about section styling */
 .about .title::after{
     content: "";
@@ -452,7 +452,7 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
-/* services section styling */
+/* team section styling */
 .team .team-content .card .box{
     transition: all 0.3s ease;
 }
@@ -489,8 +489,6 @@ section .title::after{
 }
 .team .team-content .card{
     width: calc(33% - 20px);
-    display: inline-flex;
-    margin: 10px;
     background: #222;
     text-align: center;
     border-radius: 6px;
@@ -737,6 +735,13 @@ footer span a:hover{
 }
 
 @media (max-width: 690px) {
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
     .max-width{
         padding: 0 23px;
     }
@@ -760,7 +765,14 @@ footer span a:hover{
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
     .home .home-content .text-2{
         font-size: 50px;
     }
