@@ -227,9 +227,7 @@ section .title::after{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
-.avengers .avengers-content span{
-    position: absolute;
-}
+
 .gotg .gotg-content span{
     position: absolute;
     width: 200px;
@@ -276,14 +274,14 @@ section .title::after{
     margin-left: -3px;
 }
 .avengers .avengers-content .text-2{
-    margin-top: 500px;
     font-family: "avengers";
     color: rgb(119, 119, 116);
     text-shadow:10px 4px 0 rgb(255, 255, 255),0 1px 0 rgb(255, 255, 255),-1px 0 0 rgb(255, 255, 255),0 -1px 0 rgb(255, 255, 255);
     font-style: italic;
     font-size: 100px;
     font-weight: 600;
-    margin-left: -600px;
+    margin-top: 600px;
+    margin-left: -30px;
 }
 .home .home-content .text-2 #S {
     color: rgb(152, 64, 224);
@@ -699,11 +697,7 @@ footer span a:hover{
     .home .home-content .text-2{
         font-size: 70px;
     }
-    .gotg .gotg-content span{
-        position: absolute;
-        width: 200px;
-        height: 200px;
-    }
+
     .home .home-content .text-3{
         font-size: 35px;
     }
@@ -749,11 +743,7 @@ footer span a:hover{
     .home .home-content .text-2{
         font-size: 60px;
     }
-    .gotg .gotg-content span{
-        position: absolute;
-        width: 200px;
-        height: 200px;
-    }
+
     .home .home-content .text-3{
         font-size: 32px;
     }
@@ -774,11 +764,7 @@ footer span a:hover{
     .home .home-content .text-2{
         font-size: 50px;
     }
-    .gotg .gotg-content span{
-        position: absolute;
-        width: 200px;
-        height: 200px;
-    }
+
     .home .home-content .text-3{
         font-size: 27px;
     }
