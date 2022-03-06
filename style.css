@@ -684,6 +684,11 @@ footer span a:hover{
     .home .home-content .text-2{
         font-size: 70px;
     }
+    .gotg .gotg-content span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    }
     .home .home-content .text-3{
         font-size: 35px;
     }
@@ -729,6 +734,11 @@ footer span a:hover{
     .home .home-content .text-2{
         font-size: 60px;
     }
+    .gotg .gotg-content span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    }
     .home .home-content .text-3{
         font-size: 32px;
     }
@@ -748,6 +758,11 @@ footer span a:hover{
 @media (max-width: 500px) {
     .home .home-content .text-2{
         font-size: 50px;
+    }
+    .gotg .gotg-content span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
     }
     .home .home-content .text-3{
         font-size: 27px;
